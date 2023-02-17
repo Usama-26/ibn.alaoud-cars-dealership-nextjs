@@ -4,7 +4,12 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { HiBars3BottomRight } from "react-icons/hi2";
-import { GiSpeedometer, GiGearStickPattern, GiRoad } from "react-icons/gi";
+import {
+  GiSpeedometer,
+  GiGearStickPattern,
+  GiRoad,
+  GiCarKey,
+} from "react-icons/gi";
 import { TbEngine } from "react-icons/tb";
 import { Navigation, Autoplay, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -100,176 +105,219 @@ export default function Home() {
           </div>
         </div>
         {/* Hero Slider */}
-        <Swiper
-          modules={[Navigation, Autoplay, EffectFade]}
-          rewind={true}
-          effect="fade"
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-        >
-          <SwiperSlide>
-            <div className="relative h-screen">
-              <Image
-                src={"/images/cars/2018-BMW-M140i-001-1080.jpg"}
-                width={1920}
-                height={1080}
-                alt="Image"
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute h-full w-full bg-gradient-to-b from-black/30 to-transparent top-0 left-0">
-                <div className="container max-w-6xl mx-auto my-48">
-                  <div className="max-w-md">
-                    <div className="p-4 bg-black/50 font-black font-arial">
-                      <h1 className="text-6xl   text-red-600">2018 BMW</h1>
-                      <span className="text-gray-100 text-3xl">M140i</span>
-                    </div>
-                    <div className="mt-4 bg-gray-900/70 font-medium text-sm text-gray-50">
-                      <div className="flex justify-between p-4">
-                        <div className="flex w-1/2 items-center gap-2 p-2">
-                          <span className="rounded-full p-2 bg-gray-100">
-                            <TbEngine className="w-8 h-8 stroke-red-600 stroke-1" />
-                          </span>
-                          <span>3.0L Inline 6 Twin Turbo</span>
-                        </div>
-                        <div className="flex w-1/2 items-center gap-2 p-2">
-                          <span className="rounded-full p-2 bg-gray-100">
-                            <GiSpeedometer className="w-8 h-8 fill-red-600 stroke-1" />
-                          </span>
-                          <span>250 kph / 155 mph</span>
-                        </div>
+        <div className="z-10">
+          <Swiper
+            modules={[Navigation, Autoplay, EffectFade]}
+            rewind={true}
+            effect="fade"
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+          >
+            <SwiperSlide>
+              <div className="relative h-screen">
+                <Image
+                  src={"/images/cars/2018-BMW-M140i-001-1080.jpg"}
+                  width={1920}
+                  height={1080}
+                  alt="Image"
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute h-full w-full bg-gradient-to-b from-black/30 to-transparent top-0 left-0">
+                  <div className="container max-w-6xl mx-auto my-48">
+                    <div className="max-w-md">
+                      <div className="p-4 bg-black/50 font-black font-arial">
+                        <h1 className="text-6xl   text-red-600">2018 BMW</h1>
+                        <span className="text-gray-100 text-3xl">M140i</span>
                       </div>
-                      <div className="flex justify-between p-4">
-                        <div className="flex w-1/2 items-center gap-2 p-2">
-                          <span className="rounded-full p-2 bg-gray-100">
-                            <GiGearStickPattern className="w-8 h-8 fill-red-600 stroke-1" />
-                          </span>
-                          <span>Automatic</span>
+                      <div className="mt-4 bg-gray-900/70 font-medium text-sm text-gray-50">
+                        <div className="flex justify-between p-4">
+                          <div className="flex w-1/2 items-center gap-2 p-2">
+                            <span className="rounded-full p-2 bg-gray-100">
+                              <TbEngine className="w-8 h-8 stroke-red-600 stroke-1" />
+                            </span>
+                            <span>3.0L Inline 6 Twin Turbo</span>
+                          </div>
+                          <div className="flex w-1/2 items-center gap-2 p-2">
+                            <span className="rounded-full p-2 bg-gray-100">
+                              <GiSpeedometer className="w-8 h-8 fill-red-600 stroke-1" />
+                            </span>
+                            <span>250 kph / 155 mph</span>
+                          </div>
                         </div>
-                        <div className="flex w-1/2 items-center gap-2 p-2">
-                          <span className="rounded-full p-2 bg-gray-100">
-                            <GiRoad className="w-8 h-8 fill-red-600 stroke-1" />
-                          </span>
-                          <span>4.4 Seconds</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="relative h-screen">
-              <Image
-                src={
-                  "/images/cars/2015-Mitsubishi-Lancer-Evolution-X-Final-Edition-004-1080.jpg"
-                }
-                width={1920}
-                height={1080}
-                alt="Image"
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute h-full w-full bg-gradient-to-b from-black/30 to-transparent top-0 left-0">
-                <div className="container max-w-6xl mx-auto my-48">
-                  <div className="max-w-md">
-                    <div className="p-4 bg-black/50 font-black font-arial">
-                      <h1 className="text-6xl text-red-600">2015 Mitsubishi</h1>
-                      <span className="text-gray-100 text-3xl">
-                        Lancer EVO X FE
-                      </span>
-                    </div>
-                    <div className="mt-4 bg-gray-900/70 font-medium text-sm text-gray-50">
-                      <div className="flex justify-between p-4">
-                        <div className="flex w-1/2 items-center gap-2 p-2">
-                          <span className="rounded-full p-2 bg-gray-100">
-                            <TbEngine className="w-8 h-8 stroke-red-600 stroke-1" />
-                          </span>
-                          <span>2.0L Inline 4 Turbo</span>
-                        </div>
-                        <div className="flex w-1/2 items-center gap-2 p-2">
-                          <span className="rounded-full p-2 bg-gray-100">
-                            <GiSpeedometer className="w-8 h-8 fill-red-600 stroke-1" />
-                          </span>
-                          <span>250 kph / 155 mph</span>
-                        </div>
-                      </div>
-                      <div className="flex justify-between p-4">
-                        <div className="flex w-1/2 items-center gap-2 p-2">
-                          <span className="rounded-full p-2 bg-gray-100">
-                            <GiGearStickPattern className="w-8 h-8 fill-red-600 stroke-1" />
-                          </span>
-                          <span>Automatic</span>
-                        </div>
-                        <div className="flex w-1/2 items-center gap-2 p-2">
-                          <span className="rounded-full p-2 bg-gray-100">
-                            <GiRoad className="w-8 h-8 fill-red-600 stroke-1" />
-                          </span>
-                          <span>6 Seconds</span>
+                        <div className="flex justify-between p-4">
+                          <div className="flex w-1/2 items-center gap-2 p-2">
+                            <span className="rounded-full p-2 bg-gray-100">
+                              <GiGearStickPattern className="w-8 h-8 fill-red-600 stroke-1" />
+                            </span>
+                            <span>Automatic</span>
+                          </div>
+                          <div className="flex w-1/2 items-center gap-2 p-2">
+                            <span className="rounded-full p-2 bg-gray-100">
+                              <GiRoad className="w-8 h-8 fill-red-600 stroke-1" />
+                            </span>
+                            <span>4.4 Seconds</span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="relative h-screen">
-              <Image
-                src={"/images/cars/2021-Hyundai-i30-N-001-1080.jpg"}
-                width={1920}
-                height={1080}
-                alt="Image"
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute h-full w-full bg-gradient-to-b from-black/30 to-transparent top-0 left-0">
-                <div className="container max-w-6xl mx-auto my-48">
-                  <div className="max-w-md">
-                    <div className="p-4 bg-black/50 font-black font-arial">
-                      <h1 className="text-6xl text-red-600">2021 Hyundai</h1>
-                      <span className="text-gray-100 text-3xl">i30 N</span>
-                    </div>
-                    <div className="mt-4 bg-gray-900/70 font-medium text-sm text-gray-50">
-                      <div className="flex justify-between p-4">
-                        <div className="flex w-1/2 items-center gap-2 p-2">
-                          <span className="rounded-full p-2 bg-gray-100">
-                            <TbEngine className="w-8 h-8 stroke-red-600 stroke-1" />
-                          </span>
-                          <span>2.0L Inline 4 Turbo</span>
-                        </div>
-                        <div className="flex w-1/2 items-center gap-2 p-2">
-                          <span className="rounded-full p-2 bg-gray-100">
-                            <GiSpeedometer className="w-8 h-8 fill-red-600 stroke-1" />
-                          </span>
-                          <span>250 kph / 155 mph</span>
-                        </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="relative h-screen">
+                <Image
+                  src={
+                    "/images/cars/2015-Mitsubishi-Lancer-Evolution-X-Final-Edition-004-1080.jpg"
+                  }
+                  width={1920}
+                  height={1080}
+                  alt="Image"
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute h-full w-full bg-gradient-to-b from-black/30 to-transparent top-0 left-0">
+                  <div className="container max-w-6xl mx-auto my-48">
+                    <div className="max-w-md">
+                      <div className="p-4 bg-black/50 font-black font-arial">
+                        <h1 className="text-6xl text-red-600">
+                          2015 Mitsubishi
+                        </h1>
+                        <span className="text-gray-100 text-3xl">
+                          Lancer EVO X FE
+                        </span>
                       </div>
-                      <div className="flex justify-between p-4">
-                        <div className="flex w-1/2 items-center gap-2 p-2">
-                          <span className="rounded-full p-2 bg-gray-100">
-                            <GiGearStickPattern className="w-8 h-8 fill-red-600 stroke-1" />
-                          </span>
-                          <span>Automatic</span>
+                      <div className="mt-4 bg-gray-900/70 font-medium text-sm text-gray-50">
+                        <div className="flex justify-between p-4">
+                          <div className="flex w-1/2 items-center gap-2 p-2">
+                            <span className="rounded-full p-2 bg-gray-100">
+                              <TbEngine className="w-8 h-8 stroke-red-600 stroke-1" />
+                            </span>
+                            <span>2.0L Inline 4 Turbo</span>
+                          </div>
+                          <div className="flex w-1/2 items-center gap-2 p-2">
+                            <span className="rounded-full p-2 bg-gray-100">
+                              <GiSpeedometer className="w-8 h-8 fill-red-600 stroke-1" />
+                            </span>
+                            <span>250 kph / 155 mph</span>
+                          </div>
                         </div>
-                        <div className="flex w-1/2 items-center gap-2 p-2">
-                          <span className="rounded-full p-2 bg-gray-100">
-                            <GiRoad className="w-8 h-8 fill-red-600 stroke-1" />
-                          </span>
-                          <span>5.9 Seconds</span>
+                        <div className="flex justify-between p-4">
+                          <div className="flex w-1/2 items-center gap-2 p-2">
+                            <span className="rounded-full p-2 bg-gray-100">
+                              <GiGearStickPattern className="w-8 h-8 fill-red-600 stroke-1" />
+                            </span>
+                            <span>Automatic</span>
+                          </div>
+                          <div className="flex w-1/2 items-center gap-2 p-2">
+                            <span className="rounded-full p-2 bg-gray-100">
+                              <GiRoad className="w-8 h-8 fill-red-600 stroke-1" />
+                            </span>
+                            <span>6 Seconds</span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="relative h-screen">
+                <Image
+                  src={"/images/cars/2021-Hyundai-i30-N-001-1080.jpg"}
+                  width={1920}
+                  height={1080}
+                  alt="Image"
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute h-full w-full bg-gradient-to-b from-black/30 to-transparent top-0 left-0">
+                  <div className="container max-w-6xl mx-auto my-48">
+                    <div className="max-w-md">
+                      <div className="p-4 bg-black/50 font-black font-arial">
+                        <h1 className="text-6xl text-red-600">2021 Hyundai</h1>
+                        <span className="text-gray-100 text-3xl">i30 N</span>
+                      </div>
+                      <div className="mt-4 bg-gray-900/70 font-medium text-sm text-gray-50">
+                        <div className="flex justify-between p-4">
+                          <div className="flex w-1/2 items-center gap-2 p-2">
+                            <span className="rounded-full p-2 bg-gray-100">
+                              <TbEngine className="w-8 h-8 stroke-red-600 stroke-1" />
+                            </span>
+                            <span>2.0L Inline 4 Turbo</span>
+                          </div>
+                          <div className="flex w-1/2 items-center gap-2 p-2">
+                            <span className="rounded-full p-2 bg-gray-100">
+                              <GiSpeedometer className="w-8 h-8 fill-red-600 stroke-1" />
+                            </span>
+                            <span>250 kph / 155 mph</span>
+                          </div>
+                        </div>
+                        <div className="flex justify-between p-4">
+                          <div className="flex w-1/2 items-center gap-2 p-2">
+                            <span className="rounded-full p-2 bg-gray-100">
+                              <GiGearStickPattern className="w-8 h-8 fill-red-600 stroke-1" />
+                            </span>
+                            <span>Automatic</span>
+                          </div>
+                          <div className="flex w-1/2 items-center gap-2 p-2">
+                            <span className="rounded-full p-2 bg-gray-100">
+                              <GiRoad className="w-8 h-8 fill-red-600 stroke-1" />
+                            </span>
+                            <span>5.9 Seconds</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
 
         {/* Services */}
-        <div className="w-full flex -translate-y-2 py-4"></div>
+        <div className="max-w-6xl mx-auto shadow-[0px_0px_10px_5px_rgb(0,0,0)] shadow-gray-200 flex bg-gray-100">
+          <div className="w-1/4 text-gray-700 px-8 py-12 bg-gray-50">
+            <div className="py-4">
+              <GiCarKey className="w-16 h-16 fill-gray-700" />
+            </div>
+            <h1 className="font-bold text-xl my-4">Sale Cars</h1>
+            <p className=" leading-7">
+              We have special team to help you to buy or sale your car.
+            </p>
+          </div>
+          <div className="w-1/4 text-gray-700 px-8 py-12">
+            <div className="py-4">
+              <GiCarKey className="w-16 h-16 fill-gray-700" />
+            </div>
+            <h1 className="font-bold text-xl my-4">Cars Shipping</h1>
+            <p className=" leading-7">
+              We provide free account to access to the USA auction and we will
+              manage all you shipment to you door to door
+            </p>
+          </div>
+          <div className="w-1/4 text-gray-700 px-8 py-12 bg-gray-50">
+            <div className="py-4">
+              <GiCarKey className="w-16 h-16 fill-gray-700" />
+            </div>
+            <h1 className="font-bold text-xl my-4">Car Maintenance</h1>
+            <p className=" leading-7">
+              We have a dedicated car repair and maintenance team
+            </p>
+          </div>
+          <div className="w-1/4 text-gray-700 px-8 py-12">
+            <div className="py-4">
+              <GiCarKey className="w-16 h-16 fill-gray-700" />
+            </div>
+            <h1 className="font-bold text-xl my-4">Sale Cars</h1>
+            <p className=" leading-7">
+              Support team in all section ( Sale cars, Shipping, Spare parts,
+              Car Glass and Maintenance )
+            </p>
+          </div>
+        </div>
         {/* Footer */}
         <footer class="text-gray-600 body-font">
           <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
@@ -299,7 +347,7 @@ export default function Home() {
             <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
               <div class="lg:w-1/4 md:w-1/2 w-full px-4">
                 <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                  CATEGORIES
+                  Services
                 </h2>
                 <nav class="list-none mb-10">
                   <li>
@@ -318,7 +366,7 @@ export default function Home() {
               </div>
               <div class="lg:w-1/4 md:w-1/2 w-full px-4">
                 <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                  CATEGORIES
+                  Auctions
                 </h2>
                 <nav class="list-none mb-10">
                   <li>
@@ -337,26 +385,7 @@ export default function Home() {
               </div>
               <div class="lg:w-1/4 md:w-1/2 w-full px-4">
                 <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                  CATEGORIES
-                </h2>
-                <nav class="list-none mb-10">
-                  <li>
-                    <a class="text-gray-600 hover:text-gray-800">First Link</a>
-                  </li>
-                  <li>
-                    <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-                  </li>
-                  <li>
-                    <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-                  </li>
-                  <li>
-                    <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                  </li>
-                </nav>
-              </div>
-              <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                  CATEGORIES
+                  Contact
                 </h2>
                 <nav class="list-none mb-10">
                   <li>
