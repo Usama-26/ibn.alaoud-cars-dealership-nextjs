@@ -19,6 +19,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Footer } from "@/components/Footer";
 
 const years = [
   { name: "1989" },
@@ -287,7 +288,7 @@ export default function Home() {
                               <span className="rounded-full p-2 bg-gray-100">
                                 <GiRoad className="w-8 h-8 fill-red-600 stroke-1" />
                               </span>
-                              <span>4.4 Seconds</span>
+                              <span>4.4</span>
                             </div>
                           </div>
                         </div>
@@ -344,7 +345,7 @@ export default function Home() {
                               <span className="rounded-full p-2 bg-gray-100">
                                 <GiRoad className="w-8 h-8 fill-red-600 stroke-1" />
                               </span>
-                              <span>6 Seconds</span>
+                              <span>6</span>
                             </div>
                           </div>
                         </div>
@@ -397,7 +398,7 @@ export default function Home() {
                               <span className="rounded-full p-2 bg-gray-100">
                                 <GiRoad className="w-8 h-8 fill-red-600 stroke-1" />
                               </span>
-                              <span>5.9 Seconds</span>
+                              <span>5.9</span>
                             </div>
                           </div>
                         </div>
@@ -629,40 +630,46 @@ export default function Home() {
               Services We Offer
             </h1>
           </div>
-          <div className="max-w-6xl mx-auto shadow-[0px_0px_10px_5px_rgb(0,0,0)] shadow-gray-200 flex bg-gray-100">
-            <div className="w-1/4 text-gray-700 px-8 py-12 bg-gray-50">
+          <div className="max-w-5xl mx-auto shadow-[0px_0px_5px_1px_rgb(0,0,0)] shadow-gray-300 flex bg-gray-100">
+            <div className="w-1/3 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-100">
               <div className="py-4">
-                <GiCarKey className="w-16 h-16 fill-gray-700" />
+                <Image
+                  src={"/images/icons/icons8-car-rental-64.png"}
+                  width={64}
+                  height={64}
+                  alt="Car Sale"
+                />
               </div>
               <h1 className="font-bold text-xl my-4">Sale Cars</h1>
               <p className=" leading-7">
                 We have special team to help you to buy or sale your car.
               </p>
             </div>
-            <div className="w-1/4 text-gray-700 px-8 py-12">
+
+            <div className="w-1/3 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-50">
               <div className="py-4">
-                <GiCarKey className="w-16 h-16 fill-gray-700" />
-              </div>
-              <h1 className="font-bold text-xl my-4">Cars Shipping</h1>
-              <p className=" leading-7">
-                We provide free account to access to the USA auction and we will
-                manage all you shipment to you door to door
-              </p>
-            </div>
-            <div className="w-1/4 text-gray-700 px-8 py-12 bg-gray-50">
-              <div className="py-4">
-                <GiCarKey className="w-16 h-16 fill-gray-700" />
+                <Image
+                  src={"/images/icons/icons8-maintenance-64.png"}
+                  width={64}
+                  height={64}
+                  alt="Car Sale"
+                />
               </div>
               <h1 className="font-bold text-xl my-4">Car Maintenance</h1>
               <p className=" leading-7">
                 We have a dedicated car repair and maintenance team
               </p>
             </div>
-            <div className="w-1/4 text-gray-700 px-8 py-12">
+            <div className="w-1/3 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-100">
               <div className="py-4">
-                <GiCarKey className="w-16 h-16 fill-gray-700" />
+                <Image
+                  src={"/images/icons/icons8-customer-support-64.png"}
+                  width={64}
+                  height={64}
+                  alt="Car Sale"
+                />
               </div>
-              <h1 className="font-bold text-xl my-4">Sale Cars</h1>
+              <h1 className="font-bold text-xl my-4">24/7 Support</h1>
               <p className=" leading-7">
                 Support team in all section ( Sale cars, Shipping, Spare parts,
                 Car Glass and Maintenance )
@@ -671,170 +678,7 @@ export default function Home() {
           </div>
 
           {/* Footer */}
-          <footer className="text-gray-600">
-            <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-              <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-                <Link
-                  href={"/"}
-                  className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
-                >
-                  <Image
-                    src={"/images/logo.png"}
-                    width={100}
-                    height={50}
-                    alt={"Ibn Aloud Logo"}
-                  />
-                </Link>
-                <p className="mt-2 text-sm text-gray-500">
-                  Any questions? Let us know in store at Saham, Sultanate Of
-                  Oman or call us on{" "}
-                  <a
-                    className="hover:underline underline-offset-2 text-red-600"
-                    href="tel:+96871555171"
-                  >
-                    (+968) 71555171
-                  </a>
-                </p>
-              </div>
-              <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-                <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                  <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                    Services
-                  </h2>
-                  <nav className="list-none mb-10">
-                    <li>
-                      <a className="text-gray-600 hover:text-gray-800">
-                        First Link
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-600 hover:text-gray-800">
-                        Second Link
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-600 hover:text-gray-800">
-                        Third Link
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-600 hover:text-gray-800">
-                        Fourth Link
-                      </a>
-                    </li>
-                  </nav>
-                </div>
-                <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                  <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                    Auctions
-                  </h2>
-                  <nav className="list-none mb-10">
-                    <li>
-                      <a className="text-gray-600 hover:text-gray-800">
-                        First Link
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-600 hover:text-gray-800">
-                        Second Link
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-600 hover:text-gray-800">
-                        Third Link
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-600 hover:text-gray-800">
-                        Fourth Link
-                      </a>
-                    </li>
-                  </nav>
-                </div>
-                <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                  <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                    Contact
-                  </h2>
-                  <nav className="list-none mb-10">
-                    <li>
-                      <a className="text-gray-600 hover:text-gray-800">
-                        First Link
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-600 hover:text-gray-800">
-                        Second Link
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-600 hover:text-gray-800">
-                        Third Link
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-600 hover:text-gray-800">
-                        Fourth Link
-                      </a>
-                    </li>
-                  </nav>
-                </div>
-              </div>
-            </div>
-            <div className="bg-gray-100">
-              <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                <p className="text-gray-500 text-sm text-center sm:text-left">
-                  © 2023 Ibn Aloud — All rights reserved
-                </p>
-                <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-                  <a className="text-gray-500">
-                    <svg
-                      fill="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                    </svg>
-                  </a>
-                  <a className="ml-3 text-gray-500">
-                    <svg
-                      fill="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                    </svg>
-                  </a>
-                  <a className="ml-3 text-gray-500">
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                    >
-                      <rect
-                        width="20"
-                        height="20"
-                        x="2"
-                        y="2"
-                        rx="5"
-                        ry="5"
-                      ></rect>
-                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                    </svg>
-                  </a>
-                </span>
-              </div>
-            </div>
-          </footer>
+          <Footer />
         </div>
       </div>
     </>
