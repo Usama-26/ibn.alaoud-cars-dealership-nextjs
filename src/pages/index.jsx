@@ -662,11 +662,12 @@ export default function Home() {
             </div>
             <IoMdQuote className="w-24 h-24 absolute-center fill-red-600/20" />
             <Swiper
+              modules={[Autoplay]}
+              loop={true}
               autoplay={{
-                delay: 2500,
+                delay: 5000,
                 disableOnInteraction: false,
               }}
-              rewind={true}
               grabCursor
             >
               <SwiperSlide>
