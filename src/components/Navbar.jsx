@@ -7,7 +7,7 @@ import { HiBars3BottomRight } from "react-icons/hi2";
 export function Navbar({}) {
   const router = useRouter();
   return (
-    <div className="container mx-auto w-full py-4 flex items-center justify-between ">
+    <div className=" sticky top-0 z-30 bg-white px-10 mx-auto py-4 flex items-center justify-between ">
       {/* Logo Section */}
       <div>
         <Image
@@ -76,6 +76,31 @@ export function Navbar({}) {
                   </li>
                   <li className="hover:bg-red-600 hover:text-white">
                     <Link href="/auctionCalendar">Auction Calendar</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div className="dropdown dropdown-hover">
+              <label
+                tabIndex={0}
+                className="inline-flex gap-1 items-center hover:text-red-600"
+              >
+                {" "}
+                <span>Pages</span>{" "}
+                <BsChevronDown className="h-3 w-3 stroke-1" />{" "}
+              </label>
+              <div tabIndex={0} className="dropdown-content menu w-52">
+                <ul className="bg-white mt-7 shadow font-light">
+                  <li className="hover:bg-red-600 hover:text-white">
+                    <Link href="/liveAuctions">Support</Link>
+                  </li>
+                  <li className="hover:bg-red-600 hover:text-white">
+                    <Link href="/auctionCalendar">Blog</Link>
+                  </li>
+                  <li className="hover:bg-red-600 hover:text-white">
+                    <Link href="/auctionCalendar">Shipment</Link>
                   </li>
                 </ul>
               </div>

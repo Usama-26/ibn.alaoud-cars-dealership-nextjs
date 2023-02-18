@@ -151,11 +151,12 @@ const colors = [
 const categories = [
   "coupe",
   "hatchback",
-  "cuv",
+  "CUV",
   "pickup",
   "sedan",
   "convertible",
-  "suv",
+  "SUV",
+  "sport",
 ];
 export default function Home() {
   const router = useRouter();
