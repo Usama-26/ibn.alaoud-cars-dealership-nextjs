@@ -154,14 +154,14 @@ const colors = [
 ];
 
 const categories = [
-  "coupe",
-  "hatchback",
-  "CUV",
-  "pickup",
-  "sedan",
-  "convertible",
-  "SUV",
-  "sport",
+  { name: "Coupe", photo: "coupe" },
+  { name: "Hatchback", photo: "hatchback" },
+  { name: "CUV", photo: "cuv" },
+  { name: "Pickup", photo: "pickup" },
+  { name: "Sedan", photo: "sedan" },
+  { name: "Convertible", photo: "convertible" },
+  { name: "SUV", photo: "suv" },
+  { name: "Sport", photo: "sport" },
 ];
 export default function Home() {
   const router = useRouter();
