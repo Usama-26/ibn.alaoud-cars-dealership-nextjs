@@ -574,8 +574,8 @@ export default function Home() {
             <p className="my-4">Services with excellence is our top priority</p>
             <span className="dashes inline-block h-[1px] w-10 bg-red-600"></span>
           </div>
-          <div className="max-w-5xl mx-auto shadow-[0px_0px_5px_1px_rgb(0,0,0)] shadow-gray-300 flex bg-gray-100">
-            <div className="w-1/3 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto shadow-[0px_0px_5px_1px_rgb(0,0,0)] shadow-gray-300 flex bg-gray-100">
+            <div className="w-1/4 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-50">
               <div className="py-4">
                 <Image
                   src={"/images/icons/icons8-car-rental-64.png"}
@@ -589,7 +589,7 @@ export default function Home() {
                 We have special team to help you to buy or sale your car.
               </p>
             </div>
-            <div className="w-1/3 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-100">
+            <div className="w-1/4 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-100">
               <div className="py-4">
                 <GiCargoShip className="w-16 h-16 fill-gray-600" />
               </div>
@@ -600,7 +600,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="w-1/3 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-50">
+            <div className="w-1/4 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-50">
               <div className="py-4">
                 <Image
                   src={"/images/icons/icons8-maintenance-64.png"}
@@ -614,7 +614,7 @@ export default function Home() {
                 We have a dedicated car repair and maintenance team
               </p>
             </div>
-            <div className="w-1/3 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-100">
+            <div className="w-1/4 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-100">
               <div className="py-4">
                 <Image
                   src={"/images/icons/icons8-customer-support-64.png"}
