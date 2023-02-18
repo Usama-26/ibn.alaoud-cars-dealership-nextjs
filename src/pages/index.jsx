@@ -7,7 +7,12 @@ import { Navigation, Autoplay, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Listbox, Transition } from "@headlessui/react";
 import { HiChevronUpDown, HiCheck } from "react-icons/hi2";
-import { GiSpeedometer, GiGearStickPattern, GiRoad } from "react-icons/gi";
+import {
+  GiSpeedometer,
+  GiGearStickPattern,
+  GiRoad,
+  GiCargoShip,
+} from "react-icons/gi";
 import { BsChatSquareQuote } from "react-icons/bs";
 import { TbEngine } from "react-icons/tb";
 import { IoMdQuote } from "react-icons/io";
@@ -570,7 +575,7 @@ export default function Home() {
             <span className="dashes inline-block h-[1px] w-10 bg-red-600"></span>
           </div>
           <div className="max-w-5xl mx-auto shadow-[0px_0px_5px_1px_rgb(0,0,0)] shadow-gray-300 flex bg-gray-100">
-            <div className="w-1/3 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-100">
+            <div className="w-1/3 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-50">
               <div className="py-4">
                 <Image
                   src={"/images/icons/icons8-car-rental-64.png"}
@@ -584,6 +589,16 @@ export default function Home() {
                 We have special team to help you to buy or sale your car.
               </p>
             </div>
+            <div className="w-1/3 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-100">
+              <div className="py-4">
+                <GiCargoShip className="w-16 h-16 fill-gray-600" />
+              </div>
+              <h1 className="font-bold text-xl my-4">Cars Shipping</h1>
+              <p className=" leading-7">
+                We provide free account to access to the USA auction and we will
+                manage all you shipment to you door to door
+              </p>
+            </div>
 
             <div className="w-1/3 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-50">
               <div className="py-4">
@@ -591,7 +606,7 @@ export default function Home() {
                   src={"/images/icons/icons8-maintenance-64.png"}
                   width={64}
                   height={64}
-                  alt="Car Sale"
+                  alt="Car Maintenance"
                 />
               </div>
               <h1 className="font-bold text-xl my-4">Car Maintenance</h1>
@@ -605,7 +620,7 @@ export default function Home() {
                   src={"/images/icons/icons8-customer-support-64.png"}
                   width={64}
                   height={64}
-                  alt="Car Sale"
+                  alt="Customer Support"
                 />
               </div>
               <h1 className="font-bold text-xl my-4">24/7 Support</h1>
