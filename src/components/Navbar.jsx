@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import { BsChevronDown } from "react-icons/bs";
 import { HiBars3BottomRight } from "react-icons/hi2";
 export function Navbar({}) {
   const router = useRouter();
@@ -30,25 +31,55 @@ export function Navbar({}) {
               home
             </Link>
           </li>
-          <li className="hover:text-red-600">
-            <Link
-              href={"/"}
-              className={`transition ${
-                router.pathname === "/inventory" ? "active" : ""
-              }`}
-            >
-              inventory
-            </Link>
+          <li>
+            <div className="dropdown dropdown-hover">
+              <label
+                tabIndex={0}
+                className="inline-flex gap-1 items-center hover:text-red-600"
+              >
+                {" "}
+                <span>Inventory</span>{" "}
+                <BsChevronDown className="h-3 w-3 stroke-1" />{" "}
+              </label>
+              <div tabIndex={0} className="dropdown-content menu  w-52">
+                <ul className="bg-white mt-7 shadow font-light">
+                  <li className="hover:bg-red-600 hover:text-white">
+                    <Link href="/vehicleFinder">Vehicle Finder</Link>
+                  </li>
+                  <li className="hover:bg-red-600 hover:text-white">
+                    <Link href="/forSale">Car For Sale</Link>
+                  </li>
+                  <li className="hover:bg-red-600 hover:text-white">
+                    <Link href="/sold">Sold Cars</Link>
+                  </li>
+                  <li className="hover:bg-red-600 hover:text-white">
+                    <Link href="/parts">Spare Parts</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </li>
-          <li className="hover:text-red-600">
-            <Link
-              href={"/"}
-              className={`transition ${
-                router.pathname === "/auctions" ? "active" : ""
-              }`}
-            >
-              auctions
-            </Link>
+          <li>
+            <div className="dropdown dropdown-hover">
+              <label
+                tabIndex={0}
+                className="inline-flex gap-1 items-center hover:text-red-600"
+              >
+                {" "}
+                <span>Auctions</span>{" "}
+                <BsChevronDown className="h-3 w-3 stroke-1" />{" "}
+              </label>
+              <div tabIndex={0} className="dropdown-content menu w-52">
+                <ul className="bg-white mt-7 shadow font-light">
+                  <li className="hover:bg-red-600 hover:text-white">
+                    <Link href="/liveAuctions">Live Auctions</Link>
+                  </li>
+                  <li className="hover:bg-red-600 hover:text-white">
+                    <Link href="/auctionCalendar">Auction Calendar</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </li>
           <li className="hover:text-red-600">
             <Link

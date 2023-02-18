@@ -169,11 +169,11 @@ export default function Home() {
         <title>Ibn Alaoud - Car Dealership</title>
       </Head>
       <div>
-        <div className="relative 2xl:container mx-auto">
+        <div className="relative mx-auto">
           {/* Navbar */}
           <Navbar />
           {/* Hero Slider */}
-          <div className="relative">
+          <div className="relative 2xl:container mx-auto">
             <Swiper
               modules={[Navigation, Autoplay, EffectFade]}
               rewind={true}
