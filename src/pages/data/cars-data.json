@@ -1,0 +1,98 @@
+[
+  {
+    "make": "Mazda",
+    "year": "2013",
+    "model": "MPS",
+    "engine": "3.0 Litre Twin Turbo",
+    "mileage": "120",
+    "topSpeed": "155 mph",
+    "type": "coupe",
+    "price": "35000",
+    "gallery": ["2013-Mazda-3-MPS-003-1080", "2013-Mazda-3-MPS-005-1080"],
+    "datePosted": "Mar 26, 2021",
+    "fuel": "Petrol",
+    "transmission": "Automatic"
+  },
+  {
+    "make": "Audi",
+    "year": "2018",
+    "model": "A8",
+    "engine": "4.0 Litre V8",
+    "mileage": "102",
+    "topSpeed": "160 mph",
+    "type": "sedan",
+    "price": "38000",
+    "datePosted": "Jun 09, 2020",
+    "gallery": ["2018-Audi-A8-001-1080", "2018-Audi-A8-002-1080"],
+    "fuel": "Petrol",
+    "transmission": "Automatic"
+  },
+  {
+    "make": "Honda",
+    "year": "2020",
+    "model": "Civic",
+    "engine": "2.0 Litre Twin Turbo",
+    "mileage": "1800",
+    "topSpeed": "138 mph",
+    "type": "Sports",
+    "price": "49000",
+    "gallery": [
+      "2020-Honda-Civic-Type-R-002-1080",
+      "2020-Honda-Civic-Type-R-003-1080"
+    ],
+    "datePosted": "Aug 19, 2021",
+    "fuel": "Petrol",
+    "transmission": "Automatic"
+  },
+  {
+    "make": "Ford",
+    "year": "2021",
+    "model": "Raptor 150F",
+    "engine": "4.0 Litre V8 Turbo",
+    "mileage": "900",
+    "topSpeed": "144 mph",
+    "type": "Pickup",
+    "price": "55000",
+    "gallery": [
+      "2021-Ford-F-150-Raptor-001-1080",
+      "2021-Ford-F-150-Raptor-008-1080"
+    ],
+    "datePosted": "Aug 19, 2021",
+    "fuel": "Petrol",
+    "transmission": "Automatic"
+  },
+  {
+    "make": "Hyundai",
+    "year": "2021",
+    "model": "Elantra N Line",
+    "engine": "4.0 Litre V12",
+    "mileage": "1100",
+    "topSpeed": "152 mph",
+    "type": "Sedan",
+    "price": "32000",
+    "gallery": [
+      "2021-Hyundai-Elantra-N-Line-008-1080",
+      "2021-Hyundai-Elantra-N-Line-009-1080"
+    ],
+    "datePosted": "Aug 19, 2021",
+    "fuel": "Petrol",
+    "transmission": "Automatic"
+  },
+  {
+    "make": "Toyota",
+    "year": "2023",
+    "model": "GR Corolla",
+    "engine": "3.0 Litre V8",
+    "mileage": "700",
+    "topSpeed": "135 mph",
+    "type": "Coupe",
+    "price": "32000",
+    "gallery": [
+      "2023-Toyota-GR-Corolla-001-1080",
+      "2023-Toyota-GR-Corolla-012-1080"
+    ],
+    "datePosted": "Aug 19, 2021",
+    "fuel": "Petrol",
+    "transmission": "Automatic"
+  }
+]

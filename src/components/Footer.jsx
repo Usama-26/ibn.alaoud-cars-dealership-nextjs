@@ -35,10 +35,12 @@ export function Footer({}) {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                <a className="text-gray-600 hover:text-gray-800">
+                  Vehicle Finder
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                <a className="text-gray-600 hover:text-gray-800">Spare Parts</a>
               </li>
               <li>
                 <a className="text-gray-600 hover:text-gray-800">Third Link</a>

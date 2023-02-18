@@ -6,21 +6,21 @@ import { Fragment, useEffect, useState } from "react";
 import { Navigation, Autoplay, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Listbox, Transition } from "@headlessui/react";
-import { HiBars3BottomRight, HiChevronUpDown, HiCheck } from "react-icons/hi2";
-import {
-  GiSpeedometer,
-  GiGearStickPattern,
-  GiRoad,
-  GiCarKey,
-} from "react-icons/gi";
+import { HiChevronUpDown, HiCheck } from "react-icons/hi2";
+import { GiSpeedometer, GiGearStickPattern, GiRoad } from "react-icons/gi";
+import { BsChatSquareQuote } from "react-icons/bs";
 import { TbEngine } from "react-icons/tb";
+import { IoMdQuote } from "react-icons/io";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Footer } from "@/components/Footer";
-
+import Card from "@/components/Card";
+import carsData from "./../pages/data/cars-data.json";
+import CategoryCard from "@/components/CategoryCard";
+import { Navbar } from "@/components/Navbar";
 const years = [
   { name: "1989" },
   { name: "1990" },
@@ -147,8 +147,19 @@ const colors = [
   { name: "magenta" },
   { name: "white" },
 ];
+
+const categories = [
+  "coupe",
+  "hatchback",
+  "cuv",
+  "pickup",
+  "sedan",
+  "convertible",
+  "suv",
+];
 export default function Home() {
   const router = useRouter();
+  console.log(carsData);
   const [releaseYear, setReleaseYear] = useState(years[years.length - 1]);
   const [brand, setBrand] = useState(brands[0]);
   const [color, setColor] = useState(colors[0]);
@@ -160,81 +171,7 @@ export default function Home() {
       <div>
         <div className="relative 2xl:container mx-auto">
           {/* Navbar */}
-          <div className="container mx-auto w-full py-4 flex items-center justify-between ">
-            {/* Logo Section */}
-            <div>
-              <Image
-                src={"/images/logo.png"}
-                width={100}
-                height={50}
-                alt={"Ibn Aloud Logo"}
-              />
-            </div>
-
-            {/* Links Section */}
-            <div>
-              <ul className="nav-list flex gap-4 font-medium capitalize text-gray-900">
-                <li className="hover:text-red-600">
-                  <Link
-                    href={"/"}
-                    className={`transition ${
-                      router.pathname === "/" ? "active" : ""
-                    }`}
-                  >
-                    home
-                  </Link>
-                </li>
-                <li className="hover:text-red-600">
-                  <Link
-                    href={"/"}
-                    className={`transition ${
-                      router.pathname === "/inventory" ? "active" : ""
-                    }`}
-                  >
-                    inventory
-                  </Link>
-                </li>
-                <li className="hover:text-red-600">
-                  <Link
-                    href={"/"}
-                    className={`transition ${
-                      router.pathname === "/auctions" ? "active" : ""
-                    }`}
-                  >
-                    auctions
-                  </Link>
-                </li>
-                <li className="hover:text-red-600">
-                  <Link
-                    href={"/"}
-                    className={`transition ${
-                      router.pathname === "/about" ? "active" : ""
-                    }`}
-                  >
-                    about
-                  </Link>
-                </li>
-                <li className="hover:text-red-600">
-                  <Link
-                    href={"/"}
-                    className={`transition ${
-                      router.pathname === "/contact" ? "active" : ""
-                    }`}
-                  >
-                    contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Side Panel Button */}
-            <div>
-              <button>
-                <HiBars3BottomRight className="transition w-8 h-8 hover:fill-red-600 fill-gray-900" />
-              </button>
-            </div>
-          </div>
-
+          <Navbar />
           {/* Hero Slider */}
           <div className="relative">
             <Swiper
@@ -623,12 +560,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-
           {/* Services */}
           <div className="text-center py-20">
             <h1 className="text-4xl font-light text-gray-700">
               Services We Offer
             </h1>
+            <p className="my-4">Services with excellence is our top priority</p>
+            <span className="dashes inline-block h-[1px] w-10 bg-red-600"></span>
           </div>
           <div className="max-w-5xl mx-auto shadow-[0px_0px_5px_1px_rgb(0,0,0)] shadow-gray-300 flex bg-gray-100">
             <div className="w-1/3 text-gray-700 transition duration-200 hover:shadow-md hover:scale-110 px-8 py-16 bg-gray-100">
@@ -677,6 +615,108 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Categories */}
+          <div className="text-center py-20">
+            <h1 className="text-4xl font-light text-gray-700">
+              Search by Categories
+            </h1>
+            <p className="my-4">Search your favourite car of specific style</p>
+            <span className="dashes inline-block h-[1px] w-10 bg-red-600"></span>
+          </div>
+          <div className="container max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 lg:gap-4 md:gap-2">
+              {categories.map((el, elIdx) => (
+                <Link key={elIdx} href={"/"}>
+                  <CategoryCard category={el} />
+                </Link>
+              ))}
+            </div>
+          </div>
+          {/* Top Vehicles */}
+          <div className="text-center py-20">
+            <h1 className="text-4xl font-light text-gray-700">Top Vehicles</h1>
+            <p className="my-4">Featured Vehicles Suggested by Dealers</p>
+
+            <span className="dashes inline-block h-[1px] w-10 bg-red-600"></span>
+          </div>
+          <div className="container mx-auto">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-4 md:gap-2">
+              {carsData.map((el, elIdx) => (
+                <Link key={elIdx} href="/">
+                  <Card car={el} />
+                </Link>
+              ))}
+            </div>
+          </div>
+          {/* Customer Feedback */}
+          <div className=" relative feedback-background my-20">
+            <div className="text-center py-10">
+              <h1 className="text-4xl font-light text-gray-700">
+                Customer Feedback
+              </h1>
+              <p className="my-4">
+                {"Here's what our customers have to say about us"}
+              </p>
+
+              <span className="dashes inline-block h-[1px] w-10 bg-red-600"></span>
+            </div>
+            <IoMdQuote className="w-24 h-24 absolute-center fill-red-600/20" />
+            <Swiper
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              rewind={true}
+              grabCursor
+            >
+              <SwiperSlide>
+                {" "}
+                <div className="review max-w-5xl mx-auto pb-10 text-gray-600">
+                  <p className="max-w-xl mx-auto text-center tracking-wide  italic">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Minima rem consequatur natus ipsam vitae voluptas incidunt
+                    expedita, nesciunt quae, cum aliquam in quibusdam, nemo
+                    optio?
+                  </p>
+                  <h1 className="font-bold text-2xl text-center my-4 ">
+                    <span className="border-y py-2">Jenny Shoobert</span>
+                  </h1>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                {" "}
+                <div className="review max-w-5xl mx-auto pb-10 text-gray-600">
+                  <p className="max-w-xl mx-auto text-center tracking-wide  italic">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Suscipit numquam ut illo, doloremque accusamus natus dolorem
+                    quisquam at labore corrupti et harum! Ratione sunt iste
+                    voluptatibus quis error illo labore veniam, voluptatum harum
+                    at debitis, doloremque earum temporibus totam consequuntur
+                    dolores aliquid voluptate sit in necessitatibus, enim
+                    deleniti.
+                  </p>
+                  <h1 className="font-bold text-2xl text-center my-4 ">
+                    <span className="border-y py-2">Andrew Woodman</span>
+                  </h1>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                {" "}
+                <div className="review max-w-5xl mx-auto pb-10 text-gray-600">
+                  <p className="max-w-xl mx-auto text-center tracking-wide  italic">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Sequi tempore suscipit nostrum enim fugiat ad ea iure
+                    aspernatur ducimus libero aliquam accusantium dolore, optio
+                    voluptatum deleniti reiciendis nihil qui assumenda illum.
+                    Sed repellendus eius suscipit.
+                  </p>
+                  <h1 className="font-bold text-2xl text-center my-4 ">
+                    <span className="border-y py-2">Elijah Sommervile</span>
+                  </h1>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
           {/* Footer */}
           <Footer />
         </div>

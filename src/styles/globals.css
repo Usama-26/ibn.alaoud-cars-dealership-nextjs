@@ -8,6 +8,9 @@
   color: black;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 @layer components {
   .nav-list a.active {
     @apply text-red-600  border-b-2 border-red-600;
@@ -21,6 +24,37 @@
 
   .zoom-in {
     animation: animate-zoom-in 20s ease-in-out infinite;
+  }
+
+  .dashes::before {
+    content: "";
+    @apply inline-block h-[1px] translate-x-10 w-10 bg-red-600;
+  }
+  .dashes::after {
+    content: "";
+    @apply inline-block h-[1px] -translate-y-6 -translate-x-10 w-10 bg-red-600;
+  }
+
+  .card:hover img {
+    @apply scale-110;
+  }
+  .category-card:hover img {
+    @apply scale-110;
+  }
+  .category-card:hover h3 {
+    @apply text-red-600;
+  }
+  .feedback-background {
+    background: url("/images/feedback-bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
